@@ -1,5 +1,5 @@
 import Entrance from '@component/components/entrance'
-import { PATHS, TITLE_SUBTITLE_OBJECTS } from '@component/constants'
+import { PATHS, TITLE_SUBTITLE_OBJECTS, DESCRIPTIONS } from '@component/constants'
 
 export default function Home() {
   return (
@@ -7,10 +7,10 @@ export default function Home() {
       <div className="group rounded-lg border border-transparent px-4 py-3">
           <h1 className={'mb-3 text-2xl font-semibold'}>
             <p>
-              Hey I'm Eric, a fullstack software engineer who loves to create.
+              {DESCRIPTIONS.LANDING_FIRST}
             </p>
             <p>
-              Check out my apps, music, videos, and other works here.
+              {DESCRIPTIONS.LANDING_SECOND}
             </p>
           </h1>
       </div>
