@@ -1,6 +1,7 @@
 export const TITLE_SUBTITLE_OBJECTS = {
   RESUME: {
     title: 'Resume',
+    subtitle: 'PDF in new tab'
   },
   MULTIMEDIA: {
     title: 'Multimedia',
