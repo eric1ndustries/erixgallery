@@ -1,29 +1,31 @@
-import Link from 'next/link'
+import Link from 'next/link';
+import styles from "./styles.module.css";
+import { CLASS_NAME_STYLES } from '@component/constants';
 
 type TitleSubtitleProps = {
   title: string,
-  subtitle: string,
+  subtitle?: string,
 }
 
-export default function Entrance({ entranceInfo, pathString }: {entranceInfo: TitleSubtitleProps, pathString: string}){
+export default function Entrance(
+  { entranceInfo, pathString, blank = false }: 
+  {entranceInfo: TitleSubtitleProps, pathString: string, blank?: boolean }
+  ){
   return (
-    <Link
+      <Link
           href={pathString}
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
+          className={CLASS_NAME_STYLES.LINK_BUTTON + ` ${styles.hide}`}
           rel="noopener noreferrer"
+          target={`${blank ? "_blank" : ""}`}
         >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
+          <h3 className={`mb-3 text-2xl font-semibold`}>
             {entranceInfo?.title}{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            {entranceInfo?.subtitle}
-          </p>
+          </h3>
+          <div>
+            <p>
+              {entranceInfo?.subtitle}
+            </p>
+          </div>
         </Link>
   )
 }

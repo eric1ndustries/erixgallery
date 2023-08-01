@@ -1,4 +1,5 @@
-import Entrance from '@component/components/entrance'
+import Image from "next/image"
+import Entrance from '@component/components/Entrance'
 import { PATHS, TITLE_SUBTITLE_OBJECTS, DESCRIPTIONS } from '@component/constants'
 
 export default function Home() {
@@ -13,11 +14,11 @@ export default function Home() {
               {DESCRIPTIONS.LANDING_SECOND}
             </p>
           </h1>
-      </div>
-      <div className="mb-32 grid text-center lg:grid-cols-3 lg:mb-0 lg:text-left">
-        <Entrance entranceInfo={TITLE_SUBTITLE_OBJECTS.CODE} pathString={PATHS.CODE_PROJECTS}/>
-        <Entrance entranceInfo={TITLE_SUBTITLE_OBJECTS.MULTIMEDIA} pathString={PATHS.MEDIA_PROJECTS}/>
-        <Entrance entranceInfo={TITLE_SUBTITLE_OBJECTS.RESUME} pathString={PATHS.RESUME}/>
+
+          <Entrance entranceInfo={TITLE_SUBTITLE_OBJECTS.RESUME} pathString={PATHS.RESUME} blank/>
+          <Entrance entranceInfo={TITLE_SUBTITLE_OBJECTS.MULTIMEDIA} pathString={PATHS.MEDIA_PROJECTS}/>
+          <Entrance entranceInfo={TITLE_SUBTITLE_OBJECTS.CODE} pathString={PATHS.CODE_PROJECTS}/>
+          <Image alt="I Am Waiting" src="/iAmWaiting.svg" width="500" height="400"/>
       </div>
     </>
   )

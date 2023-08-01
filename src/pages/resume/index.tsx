@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import HomeButton from '@component/components/HomeButton'
 
 export default function Resume() {
     return (
@@ -6,11 +6,10 @@ export default function Resume() {
             <iframe
                 src="/resume2023.pdf"
                 title="Resume 2023"
-                height="1000"
-                width="1000"
+                height="900"
+                width="900"
             />
-            <Link href="/"> Home </Link>
+            <HomeButton />
         </main>
     )
-
 }
