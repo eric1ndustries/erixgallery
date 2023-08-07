@@ -18,14 +18,14 @@ export default function Home() {
           <Entrance entranceInfo={TITLE_SUBTITLE_OBJECTS.RESUME} pathString={PATHS.RESUME} blank/>
           <Entrance entranceInfo={TITLE_SUBTITLE_OBJECTS.MULTIMEDIA} pathString={PATHS.MEDIA_PROJECTS}/>
           <Entrance entranceInfo={TITLE_SUBTITLE_OBJECTS.CODE} pathString={PATHS.CODE_PROJECTS}/>
-          <Link href={PATHS.GALLERY}>
+          <Link href={PATHS.ARCHIVE}>
             <Image 
               className="graphic-btn"
               alt="I Am Waiting"
               src="/iAmWaiting.svg"
               width="500"
               height="400"
-              title="Enter my gallery"
+              title="Enter the archives"
             />
           </Link>
       </div>
