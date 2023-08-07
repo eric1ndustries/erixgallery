@@ -1,5 +1,6 @@
-import HomeButton from '@component/components/HomeButton';
-import ArchiveScroll from '@component/components/ArchiveScroll';
+import React from 'react';
+import HomeButton from '../../components/HomeButton';
+import ArchiveScroll from '../../components/ArchiveScroll';
 import Image from 'next/image';
 
 export default function Archive() {

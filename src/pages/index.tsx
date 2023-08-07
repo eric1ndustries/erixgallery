@@ -1,7 +1,8 @@
+import React from "react";
 import Image from "next/image"
 import Link from "next/link"
-import { PATHS, TITLE_SUBTITLE_OBJECTS, DESCRIPTIONS } from "@component/constants"
-import Entrance from "@component/components/Entrance"
+import { PATHS, TITLE_SUBTITLE_OBJECTS, DESCRIPTIONS } from "../constants"
+import Gateway from "../components/Gateway";
 
 export default function Home() {
   return (
@@ -15,9 +16,9 @@ export default function Home() {
               {DESCRIPTIONS.LANDING_SECOND}
             </p>
           </h1>
-          <Entrance entranceInfo={TITLE_SUBTITLE_OBJECTS.RESUME} pathString={PATHS.RESUME} blank/>
-          <Entrance entranceInfo={TITLE_SUBTITLE_OBJECTS.MULTIMEDIA} pathString={PATHS.MEDIA_PROJECTS}/>
-          <Entrance entranceInfo={TITLE_SUBTITLE_OBJECTS.CODE} pathString={PATHS.CODE_PROJECTS}/>
+          <Gateway entranceInfo={TITLE_SUBTITLE_OBJECTS.RESUME} pathString={PATHS.RESUME} blank/>
+          <Gateway entranceInfo={TITLE_SUBTITLE_OBJECTS.MULTIMEDIA} pathString={PATHS.MEDIA_PROJECTS}/>
+          <Gateway entranceInfo={TITLE_SUBTITLE_OBJECTS.CODE} pathString={PATHS.CODE_PROJECTS}/>
           <Link href={PATHS.ARCHIVE}>
             <Image 
               className="graphic-btn"
