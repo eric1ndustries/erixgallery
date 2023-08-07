@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
-import Entrance from "@component/components/Entrance"
 import { PATHS, TITLE_SUBTITLE_OBJECTS, DESCRIPTIONS } from "@component/constants"
+import Entrance from "@component/components/Entrance"
 
 export default function Home() {
   return (
