@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "tsc --build tsconfig.json && npm run build:move-indexes && npm run build:move-node_modules",
+    "build:move-indexes": "rsync -avz indexes ../dist/server/source-server",
+    "build:move-node_modules": "rsync -avz node_modules ../dist/server/source-server",
     "start": "next start",
     "lint": "next lint"
   },
